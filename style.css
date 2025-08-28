@@ -1,0 +1,190 @@
+:root {
+    --rosa: #E0218A;
+    --preto: #111;
+    --branco: #fff;
+    --cinza-claro: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--branco);
+    color: var(--preto);
+    line-height: 1.6;
+}
+
+a {
+    color: var(--rosa);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+h2 {
+    border-bottom: 2px solid var(--cinza-claro);
+    padding-bottom: 10px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+header {
+    background-color: var(--preto);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Alteração: O container do header agora é 100% da largura */
+header.container {
+    max-width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.logo {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: var(--rosa);
+}
+.logo:hover {
+    text-decoration: none;
+}
+
+nav a {
+    margin-left: 20px;
+    font-weight: 500;
+    color: var(--branco);
+}
+
+#inicio {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#inicio h1 {
+    font-size: 2.2em;
+    color: var(--rosa);
+}
+
+#sobre {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+/* Alteração: Container do Sobre Mim agora é 100% da largura */
+#sobre.container {
+    max-width: 100%;
+}
+/* Alteração: Centraliza o conteúdo dentro da faixa preta */
+#sobre > * {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sobre h2 {
+    color: var(--branco);
+    border-bottom-color: var(--rosa);
+}
+
+.lista-formacao {
+    list-style: none;
+}
+.lista-formacao li {
+    margin-bottom: 15px;
+    border-left: 3px solid var(--rosa);
+    padding-left: 15px;
+}
+.lista-formacao span {
+    color: #555;
+    font-size: 0.9em;
+}
+
+#habilidades h3 {
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+.pills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.pill {
+    background-color: var(--cinza-claro);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+}
+
+.projeto-card {
+    background-color: var(--cinza-claro);
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.projeto-card a {
+    display: inline-block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contato {
+    text-align: center;
+    background-color: var(--cinza-claro);
+}
+
+footer {
+    background-color: var(--preto);
+    color: var(--branco);
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+    h1 {
+        font-size: 1.8em;
+    }
+}
+
+.sobre-mim-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 30px; /* Espaço entre a foto e o texto */
+}
+
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    border: 3px solid var(--rosa);
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    .sobre-mim-conteudo {
+        flex-direction: column; /* Coloca a foto em cima do texto */
+        text-align: center;
+    }
+}
